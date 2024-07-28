@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<!-- Input the style sheet -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FlashCard Application for SWE6623</title>
+
+<!-- stylesheet CSS -->
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+
+<!-- font awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- for Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
+
+  </head>
+
+
+<!-- Displays cards, showing the questions and answers -->
+  <body>
+    <div class="container">
+      <div class="add-flashcard-con">
+        <button id="add-flashcard"> Add Flashcard
+        </ button>
+      </div>
+      <div id="card-con">
+        <div class="card-list-container"></div>
+      </div>
+    </div>
+
+<!-- Input form for users to fill question and answer topics -->
+<div class="question-container hide" id="add-question-card">
+  <h2>Add Flashcard</h2>
+  <div class="wrapper">
+
+    <!--- Error message --->
+      <div class="error-con">
+        <span class="hide" id="error">Input fields cannot be empty.
+      </div>
+
+      <!-- close button -->
+      <!-- <i class="fa-solid fa-x"></i> -->
+      <i class="fa-solid fa-square-xmark" id="close-btn"></i>
+
+  </div>
+
+  <!-- Prompts for the user -->
+  <label for="question">Question:</label>
+  <textarea
+    class="input"
+    id="question"
+    placeholder="Type the question here..."
+    rows = "2"
+  ></textarea>
+
+  <!-- Prompts for the user -->
+  <label for="answer">Answer:</label>
+  <textarea
+    class="input"
+    id="answer"
+    rows="4"
+    placeholder="Type the answer here..."
+  ></textarea>
+
+<!-- provides users with button to save decks/collections -->
+<button id="save-btn">Save</button>
+
+</div>
+
+<!-- Script for running javascript functionality- makes webpage do things -->
+	<script src="script.js"></script>
+  </body>
+</html>
